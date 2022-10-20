@@ -1,6 +1,8 @@
 {
   "name": "tanusha-next-blog",
   "version": "0.1.0",
+  "author": "Dominic N1",
+  "email": "email",
   "private": true,
   "scripts": {
     "dev": "next dev",

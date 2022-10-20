@@ -15,17 +15,20 @@ export default function PostPage({
 }) {
   return (
     <Layout title={title}>
-      <Link href="/blog">Go Back</Link>
+      <p className="ml-5">
+        <Link href="/blog">Go Back</Link>
+      </p>
+
       <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
-        <div className="flex justify-between items-center mt-4">
-          <h1 className="text-5xl mb-7">{title}</h1>
+        <div className="sm:flex-row flex flex-col justify-between items-center mt-4">
+          <h1 className="text-4xl text-gray-900 mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
         <Image
           src={cover_image}
           alt=""
-          width={1000}
-          height={1000}
+          width={1500}
+          height={1100}
           className="w-full rounded"
         />
 
@@ -43,7 +46,7 @@ export default function PostPage({
           <div className="mr-4">{date}</div>
         </div>
 
-        <div className="blog-text mt-2">
+        <div className="blog-text text-gray-800 mt-2 text-justify">
           <div
             dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
           ></div>

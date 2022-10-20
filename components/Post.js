@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
 
-export default function Post({ post, compact }) {
+export default function Post({ post, compact, onClick }) {
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (
@@ -24,7 +24,10 @@ export default function Post({ post, compact }) {
 
       <div className="mt-2">
         <Link href={`/blog/${post.slug}`}>
-          <a className="text-2xl text-gray-700 font-bold hover:underline">
+          <a
+            className="text-2xl text-gray-700 font-bold hover:underline"
+            onClick={onClick}
+          >
             {post.frontmatter.title}
           </a>
         </Link>

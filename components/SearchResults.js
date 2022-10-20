@@ -1,6 +1,6 @@
 import Post from "./Post";
 
-export default function SearchResults({ results }) {
+export default function SearchResults({ results, onClick }) {
   if (results.length === 0) {
     return <></>;
   }
@@ -9,7 +9,7 @@ export default function SearchResults({ results }) {
       <div className="p-10">
         <h2 className="text-3xl mb-3">{results.length} Results</h2>
         {results?.map((result, index) => (
-          <Post key={index} post={result} compact={true} />
+          <Post key={index} post={result} compact={true} onClick={onClick} />
         ))}
       </div>
     </div>

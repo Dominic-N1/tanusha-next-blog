@@ -20,8 +20,12 @@ export default function Search() {
     getResults();
   }, [searchTerm]);
 
+  const searchChoseHandler = () => {
+    setSearchTerm("")
+  }
+
   return (
-    <div className="relative bg-gray-600 p-4">
+    <div className="relative bg-gradient-to-t from-gray-600 to-gray-500 p-4">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
         <form className="relative text-gray-600 w-72">
           <input
@@ -38,7 +42,7 @@ export default function Search() {
           </div>
         </form>
       </div>
-      <SearchResults results={searchResults} />
+      <SearchResults results={searchResults} onClick={searchChoseHandler} />
     </div>
   );
 }
