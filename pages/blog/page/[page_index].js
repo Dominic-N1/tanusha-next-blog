@@ -1,31 +1,32 @@
 import fs from "fs";
 import path from "path";
-import Link from "next/link";
 import matter from "gray-matter";
 import Layout from "@/components/Layout";
 import Post from "@/components/Post";
+import Pagination from "@/components/Pagination";
 import { sortByDate } from "@/utils/sort";
 import dateFormatter from "@/utils/dateFormatter";
+import { POSTS_PER_PAGE } from "@/config/index";
 
-export default function HomePage({ posts }) {
+export default function BlogPage({ posts, numPages, currentPage }) {
   return (
     <Layout>
-      <h1 className="text-5xl border-b-4 p-5 font-bold">Latest Posts</h1>
+      <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post, index) => (
           <Post key={index} post={post} />
         ))}
       </div>
-      <Link href="/blog">
-        <a className="block text-center border border-gray-500 text-gray-800 rounded-md py-4 my-5 transition duration-500 ease select-none hover:text-white hover:bg-gray-900 focus:outline-none focus:shadow-outline w-full">
-          All Posts
-        </a>
-      </Link>
+
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
+  const page = parseInt((params && params.page_index) || 1);
+
   const files = fs.readdirSync(path.join("posts"));
 
   const posts = files.map((filename) => {
@@ -41,16 +42,23 @@ export async function getStaticProps() {
       ...data,
       date: dateFormatter.format(new Date(data.date)),
     };
-
     return {
       slug,
       frontmatter,
     };
   });
 
+  const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
+  const pageIndex = page - 1;
+  const orderedPosts = posts
+    .sort(sortByDate)
+    .slice(pageIndex * POSTS_PER_PAGE, (pageIndex + 1) * POSTS_PER_PAGE);
+
   return {
     props: {
-      posts: posts.sort(sortByDate).slice(0, 6),
+      posts: orderedPosts,
+      numPages,
+      currentPage: page,
     },
   };
 }

@@ -4,9 +4,9 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
-import Layout from "../../components/Layout";
-import CategoryLabel from "../../components/CategoryLabel";
-import dateFormatter from "../../utils/dateFormatter";
+import Layout from "@/components/Layout";
+import CategoryLabel from "@/components/CategoryLabel";
+import dateFormatter from "@/utils/dateFormatter";
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
