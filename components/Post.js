@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
+import { cutText } from "@/utils/cutText";
 
 export default function Post({ post, compact, onClick }) {
   return (
@@ -31,7 +32,9 @@ export default function Post({ post, compact, onClick }) {
             {post.frontmatter.title}
           </a>
         </Link>
-        <p className="mt-2 text-gray-600">{post.frontmatter.excerpt}</p>
+        <p className="mt-2 text-gray-600">
+          {cutText(post.frontmatter.excerpt)}
+        </p>
       </div>
 
       {!compact && (

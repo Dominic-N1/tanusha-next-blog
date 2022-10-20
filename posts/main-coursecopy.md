@@ -18,9 +18,4 @@ verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide.
 
 Unde stabant, acuta, _gemino profectus et_ dici postquam tot; guibus, gestu.
 
-    var ethics_font_drive = cycleSystemProgram + deprecatedTransferIp.ide(3) /
-            rgb + nybbleBaseband;
-    permalinkCertificateMacintosh(ergonomicsIsdnDns);
-    boot = bridgeDaemonActive;
-
 porrigar **patriam** Alcmene: attonitas.

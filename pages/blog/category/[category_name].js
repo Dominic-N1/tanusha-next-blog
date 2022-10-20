@@ -11,7 +11,7 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
       <div className="flex justify-between flex-col md:flex-row">
-        <div className="mr-10 md:w-3/4 ">
+        <div className="m-auto w-11/12 md:w-3/4 ">
           <h1 className="text-5xl border-b-4 p-5 font-bold">
             Posts in {categoryName}
           </h1>
