@@ -36,5 +36,9 @@ export default function handler(req, res) {
       excerpt.toLowerCase().indexOf(req.query.q) != -1 ||
       category.toLowerCase().indexOf(req.query.q) != -1
   );
-  res.status(200).json({ results });
+  if (process.env.NODE_ENV === "production") {
+    res.status(200).json(JSON.stringify({ results }));
+  } else {
+    res.status(200).json({ results });
+  }
 }
