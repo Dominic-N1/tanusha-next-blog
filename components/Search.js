@@ -12,16 +12,11 @@ export default function Search() {
         setSearchResults([]);
       } else {
         const res = await fetch(`/api/search?q=${searchTerm}`);
-        console.log(res);
         if (process.env.NODE_ENV === "production") {
           const { results } = await JSON.parse(await res.json());
-          console.log("prod");
-          console.log("results", results);
           setSearchResults(results);
         } else {
           const { results } = await res.json();
-          console.log(`dev`);
-          console.log("results", results);
           setSearchResults(results);
         }
       }

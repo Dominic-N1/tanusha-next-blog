@@ -18,7 +18,7 @@ export default function handler(req, res) {
         "utf-8"
       );
 
-      const { data: data } = matter(markdownWithMeta);
+      const { data: data, content } = matter(markdownWithMeta);
       const frontmatter = {
         ...data,
         date: dateFormatter.format(new Date(data.date)),
@@ -27,14 +27,16 @@ export default function handler(req, res) {
       return {
         slug,
         frontmatter,
+        content,
       };
     });
   }
   const results = posts.filter(
-    ({ frontmatter: { title, excerpt, category } }) =>
+    ({ frontmatter: { title, excerpt, category }, content }) =>
       title.toLowerCase().indexOf(req.query.q) != -1 ||
       excerpt.toLowerCase().indexOf(req.query.q) != -1 ||
-      category.toLowerCase().indexOf(req.query.q) != -1
+      category.toLowerCase().indexOf(req.query.q) != -1 ||
+      content.toLowerCase().indexOf(req.query.q) != -1
   );
   if (process.env.NODE_ENV === "production") {
     res.status(200).json(JSON.stringify({ results }));
