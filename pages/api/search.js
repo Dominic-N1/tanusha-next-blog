@@ -5,10 +5,8 @@ import dateFormatter from "@/utils/dateFormatter";
 
 export default function handler(req, res) {
   let posts;
-
   if (process.env.NODE_ENV === "production") {
-    // TODO FIXME
-    // posts = require('../../cache/data').posts
+    posts = require("../../cache/data").posts;
   } else {
     const files = fs.readdirSync(path.join("posts"));
 
