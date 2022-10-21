@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
-const { marked } = require("marked");
+// const { marked } = require("marked");
 
 function postData() {
   const files = fs.readdirSync(path.join("posts"));
@@ -19,7 +19,8 @@ function postData() {
     return {
       slug,
       frontmatter,
-      content: marked.parse(content),
+      content,
+      // content: marked.parse(content),
     };
   });
 
