@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { marked } = require("marked");
 
 function postData() {
   const files = fs.readdirSync(path.join("posts"));
@@ -13,11 +14,12 @@ function postData() {
       "utf-8"
     );
 
-    const { data: frontmatter } = matter(markdownWithMeta);
+    const { data: frontmatter, content } = matter(markdownWithMeta);
 
     return {
       slug,
       frontmatter,
+      content: marked.parse(content),
     };
   });
 
