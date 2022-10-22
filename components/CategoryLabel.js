@@ -2,10 +2,13 @@ import Link from "next/link";
 
 export default function CategoryLabel({ children }) {
   const colorKey = {
-    Совет: "bg-yellow-600",
-    Книга: "bg-blue-600",
-    HTML: "bg-green-600",
-    Совет2: "bg-purple-600",
+    Совет:
+      "bg-gradient-to-t from-gray-900 via-gray-500 to-gray-900 hover:bg-gradient-to-t hover:from-gray-500 hover:via-gray-900 hover:to-gray-500",
+    Книга:
+      "bg-gradient-to-t from-gray-800 via-gray-400 to-gray-800 hover:bg-gradient-to-t hover:from-gray-400 hover:via-gray-800 hover:to-gray-400",
+    Фильм:
+      "bg-gradient-to-t from-gray-300 via-gray-700 to-gray-300 hover:bg-gradient-to-t hover:from-gray-700 hover:via-gray-300 hover:to-gray-700",
+    Пост: "bg-gradient-to-t from-gray-500 via-gray-900 to-gray-500 hover:bg-gradient-to-t hover:from-gray-900 hover:via-gray-500 hover:to-gray-900",
   };
 
   return (
