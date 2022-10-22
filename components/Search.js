@@ -42,7 +42,9 @@ export default function Search() {
             id="search"
             className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none w-72"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value.trimStart())}
+            onChange={(e) =>
+              setSearchTerm(e.target.value.trimStart().toLowerCase())
+            }
             placeholder="Search Posts..."
           />
           <div className="absolute top-0 right-0 text-black mt-3 mr-3">
