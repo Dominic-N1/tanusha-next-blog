@@ -7,6 +7,7 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import CategoryLabel from "@/components/CategoryLabel";
 import dateFormatter from "@/utils/dateFormatter";
+import Canvas from "@/components/Canvas";
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
@@ -34,13 +35,15 @@ export default function PostPage({
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
-            <Image
-              src={author_image}
-              alt={author}
-              width={20}
-              height={20}
-              className="mx-4 w-10 h-10 object-cover rounded hidden sm:block"
-            />
+            <Canvas width="30" height="30" className="mx-2">
+              <Image
+                src={author_image}
+                alt={author}
+                width={20}
+                height={20}
+                className="mx-4 w-10 h-10 object-cover rounded hidden sm:block"
+              />
+            </Canvas>
             <h4>{author}</h4>
           </div>
           <div className="mr-4">{date}</div>

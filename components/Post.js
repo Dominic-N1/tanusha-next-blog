@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
 import { cutText } from "@/utils/cutText";
+import Canvas from "./Canvas";
 
 export default function Post({ post, compact, onClick }) {
   return (
@@ -43,13 +44,15 @@ export default function Post({ post, compact, onClick }) {
             <a className="text-gray-900 hover:text-fuchsia-600">Read More</a>
           </Link>
           <div className="flex items-center">
-            <Image
-              src={post.frontmatter.author_image}
-              alt={post.frontmatter.author}
-              width={30}
-              height={30}
-              className="mx-4 w-10 h-10 object-cover rounded pl-10 hidden sm:block"
-            />
+            <Canvas width="30" height="30" className="mx-2">
+              <Image
+                src={post.frontmatter.author_image}
+                alt={post.frontmatter.author}
+                width={30}
+                height={30}
+                className="mx-4 w-10 h-10 object-cover rounded pl-10 hidden sm:block"
+              />
+            </Canvas>
             <h3 className="text-gray-700 font-bold">
               {post.frontmatter.author}
             </h3>
