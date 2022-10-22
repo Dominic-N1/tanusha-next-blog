@@ -32,7 +32,10 @@ export default function Search() {
   return (
     <div className="relative bg-gradient-to-t from-gray-600 to-gray-500 p-4">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
-        <form className="relative text-gray-600 w-72">
+        <form
+          className="relative text-gray-600 w-72"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <input
             type="search"
             name="search"
