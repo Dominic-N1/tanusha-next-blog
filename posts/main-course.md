@@ -3,7 +3,7 @@ title: "Example"
 date: "2022-08-27"
 excerpt: "Turpius Aegides membris colat volentes fallere"
 cover_image: "/images/posts/undraw_powerful_re_frhr.svg"
-category: "Книга"
+category: "Фильм"
 author: "Tatiana Ivanova"
 author_image: "/leaf-heart.svg"
 ---
