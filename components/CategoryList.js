@@ -4,7 +4,7 @@ export default function CategoryList({ categories }) {
   return (
     <div className="w-11/12 p-5 bg-white rounded-lg shadow-md mt-6 mx-auto">
       <h3 className="text-2xl bg-gray-800 text-white p-3 rounded">
-        Blog Categories
+        Блог по Категориям
       </h3>
       <ul className="divide-y divide-gray-300">
         {categories.map((category, index) => (

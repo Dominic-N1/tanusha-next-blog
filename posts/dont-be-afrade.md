@@ -4,7 +4,7 @@ date: "2022-08-18"
 excerpt: "Бояться — это нормально и даже полезно. Главное — правильно обращаться со своей тревогой. Перед нами не стоит задачи обуздать страх и не допускать впредь его появления."
 cover_image: "/images/posts/undraw_powerful_re_frhr.svg"
 category: "Совет"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

@@ -4,7 +4,7 @@ date: "2022-10-22"
 excerpt: "Повышенный интерес к прошлой романтической и сексуальной жизни партнёра испытывает каждый второй человек."
 cover_image: "/images/posts/undraw_couple_re_94tl.svg"
 category: "Пост"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

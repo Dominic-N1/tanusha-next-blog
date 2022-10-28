@@ -5,7 +5,7 @@ import Search from "./Search";
 export default function Layout({ title, keywords, description, children }) {
   return (
     <div>
-      <Head>
+      <Head lang="ru-RU">
         <title>{title}</title>
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
@@ -25,7 +25,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: "Welcome to Leaf of kindness",
-  keywords: "psycology, help, kindness",
-  description: "The best help",
+  title: "Добро пожаловать, Leaf of kindness",
+  keywords: "психология, помощь, доброта, беседа, разговор по душам",
+  description: "Помощь в решении запутанных проблем",
 };

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <Layout title="About Me">
+    <Layout title="Обо мне">
       <Image
         src="/images/posts/undraw_powerful_re_frhr.svg"
         alt="Powerful Girl"
@@ -16,7 +16,7 @@ export default function AboutPage() {
       </h1>
 
       <div className="bg-white shadow-md rounded-lg px-10 py-6 mt-6">
-        <h3 className="text-2xl mb-5 text-gray-700">Leaf of Kindness Blog</h3>
+        <h3 className="text-2xl mb-5 text-gray-700">Leaf of Kindness Блог</h3>
 
         <p className="mb-3 text-justify indent-6 text-gray-800">
           Меня зовут <strong>Иванова Татьяна</strong>. Я Социальный Психолог.

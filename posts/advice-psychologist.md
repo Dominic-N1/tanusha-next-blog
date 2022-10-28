@@ -4,7 +4,7 @@ date: "2022-09-26"
 excerpt: "Помните, что конфликт поколений - вечен! Важно правильно и корректно(не переходить на оскорбления) выводить споры на положительную нотку!"
 cover_image: "/images/posts/undraw_chatting_re_j55r.svg"
 category: "Совет"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

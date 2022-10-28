@@ -4,7 +4,7 @@ date: "2022-06-22"
 excerpt: "Стивен Кови, Ронда Берн, Андрей Курпатов, Брайан Трейси"
 cover_image: "/images/posts/undraw_books_re_8gea.svg"
 category: "Книга"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

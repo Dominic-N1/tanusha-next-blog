@@ -45,7 +45,7 @@ export default function Search() {
             onChange={(e) =>
               setSearchTerm(e.target.value.trimStart().toLowerCase())
             }
-            placeholder="Search Posts..."
+            placeholder="Искать Посты..."
           />
           <div className="absolute top-0 right-0 text-black mt-3 mr-3">
             <Image src="/images/search.svg" alt="" width={20} height={20} />

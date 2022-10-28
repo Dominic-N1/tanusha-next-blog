@@ -4,7 +4,7 @@ date: "2022-10-22"
 excerpt: "Когда происходит подобное осознание, каждый из нас спрашивает себя:"
 cover_image: "/images/posts/undraw_grandma_re_rnv1.svg"
 category: "Пост"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

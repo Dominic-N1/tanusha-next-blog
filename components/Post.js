@@ -25,13 +25,12 @@ export default function Post({ post, compact, onClick }) {
       </div>
 
       <div className="mt-2">
-        <Link href={`/blog/${post.slug}`}>
-          <a
-            className="text-2xl text-gray-700 font-bold hover:underline"
-            onClick={onClick}
-          >
-            {post.frontmatter.title}
-          </a>
+        <Link
+          href={`/blog/${post.slug}`}
+          className="text-2xl text-gray-700 font-bold hover:underline"
+          onClick={onClick}
+        >
+          {post.frontmatter.title}
         </Link>
         <p className="mt-2 text-gray-600">
           {cutText(post.frontmatter.excerpt)}
@@ -40,8 +39,11 @@ export default function Post({ post, compact, onClick }) {
 
       {!compact && (
         <div className="flex justify-between items-center mt-6">
-          <Link href={`/blog/${post.slug}`}>
-            <a className="text-gray-900 hover:text-fuchsia-600">Read More</a>
+          <Link
+            href={`/blog/${post.slug}`}
+            className="text-gray-900 hover:text-fuchsia-600"
+          >
+            Читать дальше
           </Link>
           <div className="flex items-center">
             <Canvas width="30" height="30" className="mx-2">

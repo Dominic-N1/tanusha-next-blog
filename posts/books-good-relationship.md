@@ -4,7 +4,7 @@ date: "2022-06-01"
 excerpt: "Илсе Санд, Алан и Барбара Пиз, Вирджиния Сатир, Роберт Джонсон"
 cover_image: "/images/posts/undraw_book_lover_re_rwjy.svg"
 category: "Книга"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

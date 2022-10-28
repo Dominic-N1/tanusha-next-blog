@@ -17,7 +17,7 @@ export default function PostPage({
   return (
     <Layout title={title}>
       <p className="ml-5">
-        <Link href="/blog">Go Back</Link>
+        <Link href="/blog">Вернуться</Link>
       </p>
 
       <div className="w-full px-4 py-3 md:px-10 md:py-6 bg-white rounded-lg shadow-md mt-6">

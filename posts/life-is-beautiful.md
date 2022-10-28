@@ -4,7 +4,7 @@ date: "2022-10-07"
 excerpt: "В мире нет человека, который не слышал бы о симптомах депрессии. Мало того, почти половина жителей Земли регулярно страдает от этой болезни."
 cover_image: "/images/posts/undraw_meditating_re_aiqa.svg"
 category: "Совет"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

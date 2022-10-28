@@ -4,7 +4,7 @@ date: "2022-10-10"
 excerpt: "Что же все такие это такое и чем страшна паническая атака?"
 cover_image: "/images/posts/undraw_bear_market_ania.svg"
 category: "Пост"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 

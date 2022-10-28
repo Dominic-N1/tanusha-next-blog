@@ -4,7 +4,7 @@ date: "2022-08-08"
 excerpt: "Будьте внимательны в разговоре с партнером, уберите из рук телефон, планшет, отключите телевизор. Проявите неподдельную вовлеченность в разговор."
 cover_image: "/images/posts/undraw_pilates_gpdb.svg"
 category: "Совет"
-author: "Tatiana Ivanova"
+author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
 
