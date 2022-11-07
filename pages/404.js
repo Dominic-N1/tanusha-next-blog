@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     <Layout title="Page Not Found">
       <div className="flex flex-col items-center mt-20">
         <Image
-          src="/leaf-heart.svg"
+          src="/logoti.svg"
           alt=""
           width={70}
           height={70}

@@ -15,7 +15,7 @@ export default function BaseHead({
   description,
   siteName,
   siteUrl,
-  image = "/leaf-heart.svg",
+  image = "/logoti.svg",
   children,
 }) {
   return (
@@ -24,12 +24,7 @@ export default function BaseHead({
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />{" "}
       <meta http-equiv="Content-Language" content="ru_RU" />
-      <link
-        rel="icon"
-        href="/leaf-heart.svg"
-        sizes="any"
-        type="image/svg+xml"
-      />
+      <link rel="icon" href="/logoti.svg" sizes="any" type="image/svg+xml" />
       <meta name="revisit-after" content="30 days" />
       <meta name="author" content="Domscript" />
       {/* <meta name="generator" content={generator} /> */}

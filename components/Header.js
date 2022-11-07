@@ -10,12 +10,10 @@ export default function Header() {
           href="/"
           className="flex flex-nowrap hover:opacity-60 md:w-1/5 title-font font-medium items-center md:justify-start mb-4 md:mb-0"
         >
-          <Canvas width="60" height="60">
-            <Image src="/leaf-heart.svg" width={40} height={40} alt="logo" />
-          </Canvas>
-          <span className="ml-3 text-xl whitespace-nowrap">
-            Leaf of Kindness
-          </span>
+          <Image src="/logoti.svg" width={60} height={60} alt="logo" />
+          {/* <Canvas width="60" height="60">
+          </Canvas> */}
+          <span className="ml-3 text-xl whitespace-nowrap">Психологиня</span>
         </Link>
         <nav className="flex flex-wrap md:w-4/5 items-center justify-end text-base md:ml-auto">
           <Link
