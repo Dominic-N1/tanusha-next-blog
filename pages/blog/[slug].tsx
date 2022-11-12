@@ -4,15 +4,30 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
-import Layout from "@/components/Layout";
-import CategoryLabel from "@/components/CategoryLabel";
-import dateFormatter from "@/utils/dateFormatter";
-import Canvas from "@/components/Canvas";
+import Layout from "../../components/Layout";
+import CategoryLabel from "../../components/CategoryLabel";
+import dateFormatter from "../../utils/dateFormatter";
+import Canvas from "../../components/Canvas";
+import { GetStaticProps, GetStaticPaths } from "next";
+
+interface PostPageint {
+  title: string;
+  date: string;
+  excerpt: string;
+  cover_image: string;
+  category: string;
+  author: string;
+  author_image: string;
+}
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
   content,
   slug,
+}: {
+  frontmatter: PostPageint;
+  content: string;
+  slug: string;
 }) {
   return (
     <Layout title={title}>
@@ -35,7 +50,7 @@ export default function PostPage({
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
-            <Canvas width="30" height="30" className="mx-2">
+            <Canvas width={30} height={30} className="mx-2">
               <Image
                 src={author_image}
                 alt={author}
@@ -59,7 +74,7 @@ export default function PostPage({
   );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join("posts"));
 
   const paths = files.map((filename) => ({
@@ -72,9 +87,16 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params: { slug } }) {
+export const getStaticProps = async (context: {
+  params?: { slug: string };
+  locales: any;
+  locale: any;
+  defaultLocale: any;
+}) => {
+  if (!context.params) return;
+  const { slug } = context.params;
   const markdownWithMeta = fs.readFileSync(
     path.join("posts", slug + ".md"),
     "utf-8"
@@ -92,4 +114,4 @@ export async function getStaticProps({ params: { slug } }) {
       slug,
     },
   };
-}
+};

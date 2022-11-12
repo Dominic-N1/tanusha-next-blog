@@ -1,23 +1,29 @@
 import fs from "fs";
 import path from "path";
-import Layout from "@/components/Layout";
-import Post from "@/components/Post";
-import CategoryList from "@/components/CategoryList";
+import Layout from "../../../components/Layout";
+import Post, { PostsInt } from "../../../components/Post";
+import CategoryList from "../../../components/CategoryList";
 import matter from "gray-matter";
-import { getPosts } from "@/lib/posts";
-import dateFormatter from "@/utils/dateFormatter";
+import { getPosts } from "../../../lib/posts";
+import dateFormatter from "../../../utils/dateFormatter";
 
-export default function CategoryBlogPage({ posts, categoryName, categories }) {
+export default function CategoryBlogPage({
+  posts,
+  categoryName,
+  categories,
+}: {
+  posts: PostsInt[];
+  categoryName: string;
+  categories: string[];
+}) {
   return (
     <Layout>
       <div className="flex justify-between flex-col md:flex-row">
         <div className="m-auto w-11/12 md:w-3/4 ">
-          <h1 className="text-5xl border-b-4 p-5 font-bold">
-            {categoryName}
-          </h1>
+          <h1 className="text-5xl border-b-4 p-5 font-bold">{categoryName}</h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {posts.map((post, index) => (
-              <Post key={index} post={post} />
+              <Post key={index} post={post} compact={false} />
             ))}
           </div>
         </div>
@@ -42,6 +48,14 @@ export async function getStaticPaths() {
     const frontmatter = {
       ...data,
       date: dateFormatter.format(new Date(data.date)),
+    } as {
+      title: string;
+      date: string;
+      excerpt: string;
+      cover_image: string;
+      category: string;
+      author: string;
+      author_image: string;
     };
 
     return frontmatter.category.toLowerCase();
@@ -57,10 +71,14 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { category_name } }) {
+export async function getStaticProps({
+  params: { category_name },
+}: {
+  params: { category_name: string };
+}) {
   const files = fs.readdirSync(path.join("posts"));
 
-  const posts = getPosts();
+  const posts = getPosts() as PostsInt[];
 
   const categories = posts.map((post) => post.frontmatter.category);
   const uniqueCategories = [...new Set(categories)];

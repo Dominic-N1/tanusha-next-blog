@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { sortByDate } from "@/utils/sort";
-import dateFormatter from "@/utils/dateFormatter";
+import { sortByDate } from "../utils/sort";
+import dateFormatter from "../utils/dateFormatter";
 
 const files = fs.readdirSync(path.join("posts"));
 
@@ -26,6 +26,5 @@ export function getPosts() {
       frontmatter,
     };
   });
-
   return posts.sort(sortByDate);
 }

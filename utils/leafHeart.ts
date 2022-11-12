@@ -1,5 +1,10 @@
-export default function leafHeart(canvas, context, green, red) {
-  function leafHeart(x, y, size, p) {
+export default function leafHeart(
+  canvas: HTMLCanvasElement,
+  context: CanvasRenderingContext2D,
+  green: string,
+  red: string
+) {
+  function leafHeart(x: number, y: number, size: number, p: number) {
     // x, y - coord, size - size
     const r = size / 2;
     context.beginPath();
@@ -21,7 +26,7 @@ export default function leafHeart(canvas, context, green, red) {
     );
     context.stroke();
   }
-  function heart(x, y, scale2) {
+  function heart(x: number, y: number, scale2: number) {
     const xHeart = x + scale2 * 1.4,
       yHeart = y + scale2 * 2.6;
     context.beginPath();

@@ -1,5 +1,3 @@
-import { STRING_LITERAL_DROP_BUNDLE } from "next/dist/shared/lib/constants";
-
 export interface Props {
   title: string;
   keywords: string;
@@ -16,14 +14,13 @@ export default function BaseHead({
   siteName,
   siteUrl,
   image = "/logoti.svg",
-  children,
-}) {
+}: Props) {
   return (
     <>
       {/* Global Metadata  */}
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />{" "}
-      <meta http-equiv="Content-Language" content="ru_RU" />
+      <meta httpEquiv="Content-Language" content="ru_RU" />
       <link rel="icon" href="/logoti.svg" sizes="any" type="image/svg+xml" />
       <meta name="revisit-after" content="30 days" />
       <meta name="author" content="Domscript" />
@@ -32,7 +29,7 @@ export default function BaseHead({
       <meta name="description" content={description} />
       <meta name="news_keywords" content={keywords} />
       <meta name="next-head-count" content="8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
       <meta name="referrer" content="origin-when-cross-origin" />
       <meta name="google" content="notranslate" />
       <link rel="canonical" href={siteUrl} />

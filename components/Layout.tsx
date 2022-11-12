@@ -3,6 +3,15 @@ import BaseHead from "./BaseHead";
 import Header from "./Header";
 import Search from "./Search";
 
+interface LayoutInt {
+  title: string;
+  keywords: string;
+  description: string;
+  siteName: string;
+  siteUrl: string;
+  children: React.ReactNode;
+}
+
 export default function Layout({
   title,
   keywords,
@@ -10,10 +19,10 @@ export default function Layout({
   siteName,
   siteUrl,
   children,
-}) {
+}: LayoutInt): JSX.Element {
   return (
     <div>
-      <Head lang="ru">
+      <Head>
         <BaseHead
           title={title}
           keywords={keywords}

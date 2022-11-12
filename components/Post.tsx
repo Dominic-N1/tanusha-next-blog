@@ -1,10 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
-import { cutText } from "@/utils/cutText";
+import { cutText } from "../utils/cutText";
 import Canvas from "./Canvas";
 
-export default function Post({ post, compact, onClick }) {
+export interface PostsInt {
+  slug: string;
+  frontmatter: {
+    title: string;
+    date: string;
+    excerpt: string;
+    cover_image: string;
+    category: string;
+    author: string;
+    author_image: string;
+  };
+}
+export default function Post({
+  post,
+  compact,
+  onClick,
+}: {
+  post: PostsInt;
+  compact: boolean;
+  onClick?: (e: any) => void;
+}) {
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (
@@ -46,7 +66,7 @@ export default function Post({ post, compact, onClick }) {
             Читать дальше
           </Link>
           <div className="flex items-center">
-            <Canvas width="30" height="30" className="mx-2">
+            <Canvas width={30} height={30} className="mx-2">
               <Image
                 src={post.frontmatter.author_image}
                 alt={post.frontmatter.author}

@@ -1,13 +1,23 @@
 import fs from "fs";
 import path from "path";
-import Layout from "@/components/Layout";
-import Post from "@/components/Post";
-import Pagination from "@/components/Pagination";
-import CategoryList from "@/components/CategoryList";
-import { POSTS_PER_PAGE } from "@/config/index";
-import { getPosts } from "@/lib/posts";
+import Layout from "../../../components/Layout";
+import Post, { PostsInt } from "../../../components/Post";
+import Pagination from "../../../components/Pagination";
+import CategoryList from "../../../components/CategoryList";
+import { POSTS_PER_PAGE } from "../../../config/index";
+import { getPosts } from "../../../lib/posts";
 
-export default function BlogPage({ posts, numPages, currentPage, categories }) {
+export default function BlogPage({
+  posts,
+  numPages,
+  currentPage,
+  categories,
+}: {
+  posts: PostsInt[];
+  numPages: number;
+  currentPage: number;
+  categories: string[];
+}) {
   return (
     <Layout>
       <div className="flex justify-between flex-col md:flex-row">
@@ -15,7 +25,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
           <h1 className="text-5xl border-b-4 p-5 font-bold">Блог</h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {posts.map((post, index) => (
-              <Post key={index} post={post} />
+              <Post key={index} post={post} compact={false} />
             ))}
           </div>
           <Pagination currentPage={currentPage} numPages={numPages} />
@@ -33,27 +43,37 @@ export async function getStaticPaths() {
 
   const numPages = Math.ceil(files.length / POSTS_PER_PAGE);
 
-  let paths = [];
+  let paths: {
+    params: { pageIndex: string };
+  }[] = [];
 
   for (let i = 1; i <= numPages; i++) {
     paths.push({
-      params: { page_index: i.toString() },
+      params: { pageIndex: i.toString() },
     });
   }
-
   return {
     paths,
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params }) {
-  const page = parseInt((params && params.page_index) || 1);
+export async function getStaticProps(context: {
+  params?: { pageIndex: string };
+  locales: any;
+  locale: any;
+  defaultLocale: any;
+}) {
+  let page: number;
+
+  if (!context.params) page = 1;
+  else if (!context.params.pageIndex) page = 1;
+  else {
+    page = parseInt(context.params.pageIndex, 10);
+  }
 
   const files = fs.readdirSync(path.join("posts"));
-
-  const posts = getPosts();
-
+  const posts = getPosts() as PostsInt[];
   const categories = posts.map((post) => post.frontmatter.category);
   const uniqueCategories = [...new Set(categories)];
 
