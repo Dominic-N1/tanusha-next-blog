@@ -1,9 +1,18 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import dateFormatter from "@/utils/dateFormatter";
+import dateFormatter from "../../utils/dateFormatter";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { PostsInt } from "../../components/Post";
 
-export default function handler(req, res) {
+type Data = {
+  results: string[];
+};
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
   let posts;
   if (process.env.NODE_ENV === "production") {
     posts = require("../../cache/data").posts;
@@ -32,14 +41,25 @@ export default function handler(req, res) {
     });
   }
   const results = posts.filter(
-    ({ frontmatter: { title, excerpt, category }, content }) =>
-      title.toLowerCase().indexOf(req.query.q) != -1 ||
-      excerpt.toLowerCase().indexOf(req.query.q) != -1 ||
-      category.toLowerCase().indexOf(req.query.q) != -1 ||
-      content.toLowerCase().indexOf(req.query.q) != -1
+    ({
+      frontmatter: { title, excerpt, category },
+      content,
+    }: {
+      frontmatter: { title: string; excerpt: string; category: string };
+      content: string;
+    }) => {
+      if (!req.query.q) return -1;
+      else {
+        const q = req.query.q as string;
+        title.toLowerCase().indexOf(q) != -1 ||
+          excerpt.toLowerCase().indexOf(q) != -1 ||
+          category.toLowerCase().indexOf(q) != -1 ||
+          content.toLowerCase().indexOf(q) != -1;
+      }
+    }
   );
   if (process.env.NODE_ENV === "production") {
-    res.status(200).json(JSON.stringify({ results }));
+    res.status(200).json({ results });
   } else {
     res.status(200).json({ results });
   }

@@ -1,6 +1,12 @@
-import Post from "./Post";
+import Post, { PostsInt } from "./Post";
 
-export default function SearchResults({ results, onClick }) {
+export default function SearchResults({
+  results,
+  onClick,
+}: {
+  results: PostsInt[];
+  onClick: () => void;
+}) {
   if (results.length === 0) {
     return <></>;
   }
