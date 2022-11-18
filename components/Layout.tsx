@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BaseHead from "./BaseHead";
+import Footer from "./Footer";
 import Header from "./Header";
 import Search from "./Search";
 
@@ -34,6 +35,7 @@ export default function Layout({
       <Header />
       <Search />
       <main className="container mx-auto my-7">{children}</main>
+      <Footer className="" />
     </div>
   );
 }
