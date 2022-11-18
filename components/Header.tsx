@@ -30,13 +30,6 @@ export default function Header() {
           >
             Обо мне
           </Link>
-          <Link
-            title="instagram"
-            href="https://www.instagram.com/ivanovatanya2508/"
-            className="mx-5 cursor-pointer uppercase hover:text-fuchsia-900"
-          >
-            Instagram
-          </Link>
         </nav>
       </div>
     </header>
