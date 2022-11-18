@@ -4,7 +4,7 @@ import Canvas from "./Canvas";
 
 export default function Header() {
   return (
-    <header className="bg-gradient-to-br from-gray-900 via-gray-500 to-gray-900 text-fuchsia-300 font-bold shadow w-full">
+    <header className="bg-gray-900 text-gray-300 font-bold shadow w-full">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link
           href="/"

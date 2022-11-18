@@ -37,7 +37,7 @@ export default function PostPage({
 
       <div className="w-full px-4 py-3 md:px-10 md:py-6 bg-white rounded-lg shadow-md mt-6">
         <div className="sm:flex-row flex flex-col justify-between items-center mt-4">
-          <h1 className="text-4xl text-gray-900 mb-7">{title}</h1>
+          <h1 className="text-4xl text-gray-700 mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
         <Image
