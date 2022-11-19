@@ -33,6 +33,10 @@ export default function BaseHead({
       <meta name="referrer" content="origin-when-cross-origin" />
       <meta name="google" content="notranslate" />
       <link rel="canonical" href={siteUrl} />
+      <meta
+        name="google-site-verification"
+        content="PM9Z_EFstSuNY4C-uL64PYlpc8zGRaGTesUGT1xIQBI"
+      />
       {/* Primary Meta Tags  */}
       <title>{title}</title>
       <meta name="title" content={title} />
