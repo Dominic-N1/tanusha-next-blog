@@ -47,5 +47,5 @@ Layout.defaultProps = {
   description:
     "Семейный психолог в Москве. Помощь при перегорании. Психолог семейных отношений, консультации. ⭐ от 2000 рублей/ч ⭐!  Индивидуальный подход, удобный график. ✅ Практика с 2016 года. ✅ Более 1 000 клиентов",
   siteName: "Психологиня",
-  siteUrl: "https://leaf-of-kindness.netlify.app/",
+  siteUrl: "https://psychology.beauty/",
 };
