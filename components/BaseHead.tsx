@@ -35,7 +35,7 @@ export default function BaseHead({
       <link rel="canonical" href={siteUrl} />
       <meta
         name="google-site-verification"
-        content="PM9Z_EFstSuNY4C-uL64PYlpc8zGRaGTesUGT1xIQBI"
+        content="NYz0IgL9fgIhWQHOrVMln-FXmyTPWM9n59gLTyodih8"
       />
       {/* Primary Meta Tags  */}
       <title>{title}</title>
