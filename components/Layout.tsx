@@ -22,7 +22,7 @@ export default function Layout({
   children,
 }: LayoutInt): JSX.Element {
   return (
-    <div>
+    <>
       <Head>
         <BaseHead
           title={title}
@@ -36,7 +36,7 @@ export default function Layout({
       <Search />
       <main className="container mx-auto my-7">{children}</main>
       <Footer className="" />
-    </div>
+    </>
   );
 }
 
