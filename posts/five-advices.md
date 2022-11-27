@@ -3,7 +3,7 @@ title: "5 советов как избавиться от страха!"
 date: "2022-09-15"
 excerpt: "Научитесь переключаться, не застревайте на прошлых ситуациях. Не переживайте слишком долго и не возвращайтесь к одним и тем же событиям."
 cover_image: "/images/posts/undraw_pilates_gpdb.svg"
-category: "Совет"
+category: "Sovet"
 author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---

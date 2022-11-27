@@ -3,7 +3,7 @@ title: "Как быть, если у вас с родителями разные
 date: "2022-09-26"
 excerpt: "Помните, что конфликт поколений - вечен! Важно правильно и корректно(не переходить на оскорбления) выводить споры на положительную нотку!"
 cover_image: "/images/posts/undraw_chatting_re_j55r.svg"
-category: "Совет"
+category: "Sovet"
 author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---

@@ -3,7 +3,7 @@ title: "В погоне за счастьем (2006)"
 date: "2022-08-27"
 excerpt: "Крис Гарднер – отец-одиночка. Воспитывая пятилетнего сына, Крис изо всех сил старается сделать так, чтобы ребенок рос счастливым."
 cover_image: "/images/movie/undraw_home_cinema_l7yl.svg"
-category: "Фильм"
+category: "Film"
 author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---

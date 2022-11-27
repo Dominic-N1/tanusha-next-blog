@@ -3,7 +3,7 @@ title: "Книги, которые научат взаимодействоват
 date: "2022-08-27"
 excerpt: "Кейт Ферраци, Марк Гоулстон, Пол Экман, Филип Зимбардо, Пол Магки"
 cover_image: "/images/posts/undraw_connecting_teams_re_hno7.svg"
-category: "Книга"
+category: "Kniga"
 author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---

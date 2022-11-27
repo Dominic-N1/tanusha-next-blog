@@ -38,7 +38,7 @@ export default function BaseHead({
         content="NYz0IgL9fgIhWQHOrVMln-FXmyTPWM9n59gLTyodih8"
       />
       {/* Primary Meta Tags  */}
-      <title>{title}</title>
+      <title>ПсихологИНЯ | Psychology | Beauty</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       {/* Open Graph / Facebook  */}

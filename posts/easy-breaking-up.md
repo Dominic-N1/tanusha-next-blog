@@ -3,7 +3,7 @@ title: "Как правильно расставаться?"
 date: "2022-11-10"
 excerpt: "Люди боятся расставаний, бояться услышать слова прощания или произнести их. Лишь некоторые способны цивилизованно расстаться."
 cover_image: "/images/posts/undraw_love_re_mwbq.svg"
-category: "Пост"
+category: "Post"
 author: "Татьяна Иванова"
 author_image: "/leaf-heart.svg"
 ---
