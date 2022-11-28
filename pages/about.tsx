@@ -16,9 +16,9 @@ export default function AboutPage() {
       </h1>
 
       <div className="bg-white shadow-md rounded-lg px-10 py-6 mt-6">
-        <h3 className="text-2xl mb-5 text-gray-700">Leaf of Kindness Блог</h3>
+        <h3 className="text-2xl mb-5 text-gray-700"></h3>
 
-        <p className="mb-3 text-justify indent-6 text-gray-800">
+        <p className="mb-3 text-2xl text-justify indent-6 text-gray-800">
           Меня зовут <strong>Иванова Татьяна</strong>. Я Социальный Психолог.
           Посвятила 5 лет учебe в университе на факультете <em>Психология</em>.
           Поняв, что я хочу знать о психологии еще больше, прошла обучение у
