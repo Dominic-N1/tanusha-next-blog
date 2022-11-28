@@ -48,7 +48,7 @@ export default function PostPage({
           className="w-full rounded"
         />
 
-        <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
+        <div className="flex justify-between items-center bg-gray-50 p-2 my-8">
           <div className="flex items-center">
             <Canvas width={30} height={30} className="mx-2">
               <Image

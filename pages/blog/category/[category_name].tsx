@@ -16,11 +16,29 @@ export default function CategoryBlogPage({
   categoryName: string;
   categories: string[];
 }) {
+  let category_ru: string;
+  switch (categoryName.toLowerCase()) {
+    case "sovet":
+      category_ru = "Совет";
+      break;
+    case "kniga":
+      category_ru = "Книга";
+      break;
+    case "film":
+      category_ru = "Фильм";
+      break;
+    case "post":
+      category_ru = "Пост";
+      break;
+    default:
+      category_ru = "Совет";
+      break;
+  }
   return (
     <Layout>
       <div className="flex justify-between flex-col md:flex-row">
         <div className="m-auto w-11/12 md:w-3/4 ">
-          <h1 className="text-5xl border-b-4 p-5 font-bold">{categoryName}</h1>
+          <h1 className="text-5xl border-b-4 p-5 font-bold">{category_ru}</h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {posts.map((post, index) => (
               <Post key={index} post={post} compact={false} />

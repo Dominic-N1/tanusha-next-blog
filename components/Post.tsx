@@ -26,7 +26,7 @@ export default function Post({
   onClick?: (e: any) => void;
 }) {
   return (
-    <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
+    <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6 flex flex-col">
       {!compact && (
         <Image
           src={post.frontmatter.cover_image}
@@ -58,10 +58,10 @@ export default function Post({
       </div>
 
       {!compact && (
-        <div className="flex justify-between items-center mt-6">
+        <div className="flex flex-row justify-between items-center mt-auto">
           <Link
             href={`/blog/${post.slug}`}
-            className="text-gray-900 hover:text-fuchsia-600"
+            className="text-gray-900 hover:text-fuchsia-600 "
           >
             Читать дальше
           </Link>

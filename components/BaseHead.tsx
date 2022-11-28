@@ -21,7 +21,7 @@ export default function BaseHead({
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />{" "}
       <meta httpEquiv="Content-Language" content="ru_RU" />
-      <link rel="icon" href="/logoti.svg" sizes="any" type="image/svg+xml" />
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <meta name="revisit-after" content="30 days" />
       <meta name="author" content="Domscript" />
       {/* <meta name="generator" content={generator} /> */}
