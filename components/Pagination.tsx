@@ -19,14 +19,14 @@ export default function Pagination({
       <ul className="flex pl-0 list-none my-2">
         {!isFirst && (
           <Link href={prevPage}>
-            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer">
+            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:text-white hover:bg-gray-900 cursor-pointer">
               Предыдущая
             </li>
           </Link>
         )}
         {Array.from({ length: numPages }, (_, i) => (
           <Link href={`/blog/page/${i + 1}`} key={`page-${i}`}>
-            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer">
+            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:text-white hover:bg-gray-900 cursor-pointer">
               {i + 1}
             </li>
           </Link>
@@ -34,7 +34,7 @@ export default function Pagination({
 
         {!isLast && (
           <Link href={nextPage}>
-            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:bg-gray-200 cursor-pointer">
+            <li className="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-gray-800 mr-1 hover:text-white hover:bg-gray-900 cursor-pointer">
               Следующая
             </li>
           </Link>
