@@ -2,6 +2,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import Post, { PostsInt } from "../components/Post";
 import { getPosts } from "../lib/posts";
+import { POSTS_PER_PAGE } from "../config/index";
 
 export default function HomePage({ posts }: { posts: PostsInt[] }) {
   return (
@@ -25,7 +26,7 @@ export default function HomePage({ posts }: { posts: PostsInt[] }) {
 export async function getStaticProps() {
   return {
     props: {
-      posts: getPosts().slice(0, 6),
+      posts: getPosts().slice(0, POSTS_PER_PAGE),
     },
   };
 }
