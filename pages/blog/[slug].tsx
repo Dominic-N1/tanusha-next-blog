@@ -4,11 +4,12 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
-import Layout from "../../components/Layout";
-import CategoryLabel from "../../components/CategoryLabel";
-import dateFormatter from "../../utils/dateFormatter";
-import Canvas from "../../components/Canvas";
+import Layout from "@/components/Layout";
+import CategoryLabel from "@/components/CategoryLabel";
+import dateFormatter from "@/utils/dateFormatter";
+import Canvas from "@/components/Canvas";
 import { GetStaticProps, GetStaticPaths } from "next";
+import { dateRu } from "@/utils/dateFormatter";
 
 interface PostPageint {
   title: string;
@@ -61,7 +62,7 @@ export default function PostPage({
             </Canvas>
             <h4>{author}</h4>
           </div>
-          <div className="mr-4">{date}</div>
+          <div className="mr-4">{dateRu(date)}</div>
         </div>
 
         <div className="blog-text text-gray-800 mt-2 text-justify indent-6">
