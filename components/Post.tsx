@@ -3,6 +3,7 @@ import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
 import { cutText } from "../utils/cutText";
 import Canvas from "./Canvas";
+import { dateRu } from "@/utils/dateFormatter";
 
 export interface PostsInt {
   slug: string;
@@ -39,7 +40,7 @@ export default function Post({
 
       <div className="flex justify-between items-center">
         <span className="font-light text-gray-600">
-          {post.frontmatter.date}
+          {dateRu(post.frontmatter.date)}
         </span>
         <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
       </div>
