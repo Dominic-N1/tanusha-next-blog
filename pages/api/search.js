@@ -31,7 +31,6 @@ export default function handler(req, res) {
       };
     });
   }
-  console.log(results);
   const results = posts.filter(
     ({ frontmatter: { title, excerpt, category }, content }) =>
       title.toLowerCase().indexOf(req.query.q) != -1 ||
