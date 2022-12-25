@@ -1,6 +1,8 @@
 import LinkButton from "./LinkButton";
 import { contacts } from "../utils/contacts";
 
+const size = 30; // px
+
 const Footer = (props: { className: string }): JSX.Element => {
   const styles = `flex flex-col text-slate-700 text-center ${props.className}`;
 
@@ -17,8 +19,8 @@ const Footer = (props: { className: string }): JSX.Element => {
             href={el.href}
             viewBox={el.viewBox}
             color={el.color}
-            width={30}
-            height={30}
+            width={size}
+            height={size}
           />
         ))}
       </ul>
