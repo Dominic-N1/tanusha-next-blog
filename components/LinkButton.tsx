@@ -35,7 +35,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
         rel="noopener noreferrer"
       >
         <Icon
-          viewBox="0 0 496 512"
+          viewBox={props.viewBox}
           color={LinkButtonColor ? props.color : "#374151"}
           path={props.path}
           width={props.width}
