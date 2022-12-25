@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 export default function NotFoundPage() {
   return (
-    <Layout title="Page Not Found">
+    <Layout title="Страница не найдена">
       <div className="flex flex-col items-center mt-20">
         <Image
           src="/logoti.svg"

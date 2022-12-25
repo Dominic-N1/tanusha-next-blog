@@ -35,7 +35,7 @@ export default function CategoryBlogPage({
       break;
   }
   return (
-    <Layout>
+    <Layout title={"ПсихологИНЯ, " + category_ru}>
       <div className="flex justify-between flex-col md:flex-row">
         <div className="m-auto w-11/12 md:w-3/4 ">
           <h1 className="text-5xl border-b-4 p-5 font-bold">{category_ru}</h1>
