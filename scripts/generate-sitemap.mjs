@@ -44,7 +44,6 @@ async function generate() {
               .replace(".md", "");
             const route =
               path === "/index" ? "/" : path === "/blog/index" ? "/blog" : path;
-            console.log(route);
             return `
               <url>
                   <loc>${`https://www.psychology.beauty${route}`}</loc>
